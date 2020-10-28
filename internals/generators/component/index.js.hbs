@@ -1,0 +1,31 @@
+/**
+ *
+ * {{ properCase name }}
+ *
+ */
+
+{{#if memo}}
+import React, { memo } from 'react';
+{{else}}
+import React from 'react';
+{{/if}}
+import { StyleSheet, View, Text } from 'react-native';
+// import PropTypes from 'prop-types';
+
+function {{ properCase name }}() {
+  return (
+    <View>
+      <Text>{{properCase name}}</Text>
+    </View>
+  );
+}
+
+{{ properCase name }}.propTypes = {};
+
+const styles = StyleSheet.create({});
+
+{{#if memo}}
+export default memo({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}
