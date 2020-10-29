@@ -12,7 +12,9 @@
     "prettify": "prettier --write"
   },
   "rnpm": {
-    "assets": ["assets/fonts/"]
+    "assets": [
+      "assets/fonts/"
+    ]
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -21,7 +23,9 @@
     "@react-navigation/stack": "^5.10.0",
     "hoist-non-react-statics": "^3.3.2",
     "immer": "^7.0.14",
+    "intl": "^1.2.5",
     "react": "16.13.1",
+    "react-intl": "^5.8.8",
     "react-native": "0.63.3",
     "react-native-elements": "^3.0.0-alpha.1",
     "react-native-gesture-handler": "^1.8.0",

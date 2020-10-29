@@ -10,16 +10,18 @@ import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
+import { FormattedMessage } from 'react-intl'
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectLoginScreen from './selectors';
 import reducer from './reducer';
 import saga from './saga';
+import messages from './messages';
 
 import { changeUsername, changePassoword } from './actions';
 
-import TextField from 'components/TextField';
+import { Input } from 'react-native-elements';
 
 export function LoginScreen({
   loginScreen,
@@ -32,12 +34,12 @@ export function LoginScreen({
 
   return (
     <View>
-      <TextField 
+      <Input 
         value={username}
-        placeholder={"username"}
+        placeholder={<FormattedMessage {...messages.username}/>}
         onChangeText={onChangeUsername}
       />
-      <TextField 
+      <Input 
         value={password}
         placeholder={"password"}
         onChangeText={onChangePassoword}
