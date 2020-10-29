@@ -6,22 +6,21 @@
 
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-import { FormattedMessage } from 'react-intl'
+import FlexView from 'components/FlexView';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
 import makeSelectLoginScreen from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
-
 import { changeUsername, changePassoword } from './actions';
 
-import { Input } from 'react-native-elements';
+import LoginForm from './sections/LoginForm';
+import Title from './sections/Title';
+import CopyRight from './sections/CopyRight';
 
 export function LoginScreen({
   loginScreen,
@@ -33,18 +32,16 @@ export function LoginScreen({
   const { username, password } = loginScreen;
 
   return (
-    <View>
-      <Input 
-        value={username}
-        placeholder={<FormattedMessage {...messages.username}/>}
-        onChangeText={onChangeUsername}
+    <FlexView>
+      <Title />
+      <LoginForm 
+        username={username}
+        password={password}
+        onChangeUsername={onChangeUsername}
+        onChangePassoword={onChangePassoword}
       />
-      <Input 
-        value={password}
-        placeholder={"password"}
-        onChangeText={onChangePassoword}
-      />
-    </View>
+      <CopyRight />
+    </FlexView>
   );
 }
 

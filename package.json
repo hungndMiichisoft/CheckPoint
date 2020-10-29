@@ -9,7 +9,8 @@
     "test": "jest",
     "lint": "eslint .",
     "generate": "plop --plopfile internals/generators/index.js",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "extract-intl": "node ./internals/scripts/extract-intl.js"
   },
   "rnpm": {
     "assets": [
@@ -44,12 +45,14 @@
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "babel-plugin-react-intl": "^8.2.10",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
     "plop": "^2.7.4",
     "prettier": "2.1.2",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "16.13.1",
+    "shelljs": "^0.8.4"
   },
   "jest": {
     "preset": "react-native"
