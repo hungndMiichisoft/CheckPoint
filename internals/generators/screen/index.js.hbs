@@ -12,6 +12,9 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+{{#if wantMessages}}
+import { FormattedMessage } from 'react-intl';
+{{/if}}
 {{#if wantActionsAndReducer}}
 import { createStructuredSelector } from 'reselect';
 {{/if}}
@@ -28,6 +31,9 @@ import reducer from './reducer';
 {{#if wantSaga}}
 import saga from './saga';
 {{/if}}
+{{#if wantMessages}}
+import messages from './messages';
+{{/if}}
 
 export function {{ properCase name }}() {
   {{#if wantActionsAndReducer}}
@@ -39,6 +45,11 @@ export function {{ properCase name }}() {
 
   return (
     <View>
+      <Text>
+        {{#if wantMessages}}
+        <FormattedMessage {...messages.header} />
+        {{/if}}
+      </Text>
       <Text>{{properCase name}}</Text>
     </View>
   );

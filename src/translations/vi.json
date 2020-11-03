@@ -21,5 +21,13 @@
   "app.label.next": "Tiếp theo",
   "app.label.prev": "Trở lại",
   "app.label.image": "Hình ảnh",
-  "app.label.sport": "Môn thể thao"
+  "app.label.sport": "Môn thể thao",
+
+  "app.components.HorizontalCalendar.monday": "T.2",
+  "app.components.HorizontalCalendar.tuesday": "T.3",
+  "app.components.HorizontalCalendar.wednesday": "T.4",
+  "app.components.HorizontalCalendar.thursday": "T.5",
+  "app.components.HorizontalCalendar.friday": "T.6",
+  "app.components.HorizontalCalendar.saturday": "T.7",
+  "app.components.HorizontalCalendar.sunday": "CN"
 }

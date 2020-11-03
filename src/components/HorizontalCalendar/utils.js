@@ -4,7 +4,7 @@ export function getMaxDate(date) {
   var activeMonth = date.getMonth();
   var activeYear = date.getFullYear();
   var maxDate = nDates[activeMonth];
-  if ((activeYear % 4 == 0 && activeYear % 100 != 0) || activeYear % 400 == 0) {
+  if (((activeYear % 4 === 0 && activeYear % 100 !== 0) || activeYear % 400 === 0) && activeMonth === 1) {
     maxDate += 1;
   }
   return maxDate;
@@ -16,7 +16,7 @@ export function genarateWeekDate(date) {
   var activeDate = date.getDate();
   var maxDate = getMaxDate(date);
 
-  if (activeDay == 0) {
+  if (activeDay === 0) {
     activeDay = 7;
   }
 
@@ -27,10 +27,11 @@ export function genarateWeekDate(date) {
     }
     list.push(date);
   }
+
   for (var s = 1; s <= 7 - activeDay; s++) {
     var date = activeDate + s;
     if (date > maxDate) {
-      date = maxDate - date;
+      date = date - maxDate;
     }
     list.push(date);
   }

@@ -10,16 +10,28 @@ import React, { memo } from 'react';
 import React from 'react';
 {{/if}}
 import { StyleSheet, View, Text } from 'react-native';
+import PropTypes from 'prop-types';
+{{#if wantMessages}}
+import { FormattedMessage } from 'react-intl';
+import messages from './messages';
+{{/if}}
 
 function {{ properCase name }}() {
   return (
     <View>
+        {{#if wantMessages}}
+        <Text>
+          <FormattedMessage {...messages.header} />
+        </Text>
+        {{/if}}
       <Text>{{properCase name}}</Text>
     </View>
   );
 }
 
-{{ properCase name }}.propTypes = {};
+{{ properCase name }}.propTypes = {
+  props: PropTypes
+};
 
 const styles = StyleSheet.create({});
 
