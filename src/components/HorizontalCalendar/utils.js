@@ -1,9 +1,9 @@
-export const nDates = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+import { N_DATES } from './constants';
 
 export function getMaxDate(date) {
   var activeMonth = date.getMonth();
   var activeYear = date.getFullYear();
-  var maxDate = nDates[activeMonth];
+  var maxDate = N_DATES[activeMonth];
   if (((activeYear % 4 === 0 && activeYear % 100 !== 0) || activeYear % 400 === 0) && activeMonth === 1) {
     maxDate += 1;
   }
