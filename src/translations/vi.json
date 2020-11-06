@@ -23,11 +23,24 @@
   "app.label.image": "Hình ảnh",
   "app.label.sport": "Môn thể thao",
 
-  "app.components.HorizontalCalendar.monday": "T.2",
-  "app.components.HorizontalCalendar.tuesday": "T.3",
-  "app.components.HorizontalCalendar.wednesday": "T.4",
-  "app.components.HorizontalCalendar.thursday": "T.5",
-  "app.components.HorizontalCalendar.friday": "T.6",
-  "app.components.HorizontalCalendar.saturday": "T.7",
-  "app.components.HorizontalCalendar.sunday": "CN"
+  "app.label.monday": "T.2",
+  "app.label.tuesday": "T.3",
+  "app.label.wednesday": "T.4",
+  "app.label.thursday": "T.5",
+  "app.label.friday": "T.6",
+  "app.label.saturday": "T.7",
+  "app.label.sunday": "CN",
+
+  "app.label.january": "Tháng 1",
+  "app.label.february": "Tháng 2",
+  "app.label.march": "Tháng 3",
+  "app.label.april": "Tháng 4",
+  "app.label.may": "Tháng 5",
+  "app.label.june": "Tháng 6",
+  "app.label.july": "Tháng 7",
+  "app.label.august": "Tháng 8",
+  "app.label.september": "Tháng 9",
+  "app.label.october": "Tháng 10",
+  "app.label.november": "Tháng 11",
+  "app.label.december": "Tháng 12"
 }

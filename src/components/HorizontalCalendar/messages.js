@@ -9,24 +9,24 @@ export const scope = 'app.components.HorizontalCalendar';
 
 export default defineMessages({
   day0OfWeek: {
-    id: `${scope}.monday`,
+    id: 'app.label.monday',
   },
   day1OfWeek: {
-    id: `${scope}.tuesday`,
+    id: 'app.label.tuesday',
   },
   day2OfWeek: {
-    id: `${scope}.wednesday`,
+    id: 'app.label.wednesday',
   },
   day3OfWeek: {
-    id: `${scope}.thursday`,
+    id: 'app.label.thursday',
   },
   day4OfWeek: {
-    id: `${scope}.friday`,
+    id: 'app.label.friday',
   },
   day5OfWeek: {
-    id: `${scope}.saturday`,
+    id: 'app.label.saturday',
   },
   day6OfWeek: {
-    id: `${scope}.sunday`,
+    id: 'app.label.sunday',
   },
 });
